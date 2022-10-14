@@ -1,0 +1,166 @@
+@font-face {
+    font-family: van;
+    src: url(./5f729a273e12c8c5fddc5a82_VanguardCF-DemiBold\ \(1\).ttf);
+}
+@font-face {
+    font-family: gilroy;
+    src: url(./Gilroy-Regular.ttf);
+}
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#page{
+    min-height: 100vh;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    transition: 1s ease;
+    /* background-color: lightblue; */
+    /* align-items: flex-end; */
+}
+#circle{
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background-color: transparent;
+border: 3px solid black;
+position: fixed;
+background-size: cover;
+z-index: 9999;
+
+/* mix-blend-mode: difference; */
+
+}
+#nav{
+    align-items: center;
+    padding: 0 50px;
+    width: 100%;
+    height: 5vw;
+    display: flex;
+    justify-content: space-between;
+    background-color:transparent;
+}
+#nav>img{
+    height: 50px;
+}
+
+#text>h1{
+    /* position: relative; */
+    font-family: van;
+    font-size: 13vw;
+    line-height: 1;
+    margin-top: 2vw;
+    margin-left: 5vw;
+    position: relative;
+    /* display: flex;
+    align-items: center; */
+    
+}
+#text>h1::after{
+    content: "*";
+    font-size: 3vw;
+    position: absolute;
+    top: 57%;
+    /* font-family: gilroy; */
+}
+#second{
+    display: flex;
+    gap: 3vw;
+    /* justify-content: flex-end; */
+    flex-direction: column;
+}
+#second .section:nth-child(2n){
+    justify-content: flex-start;
+}
+.section{
+    height: 600px;
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 5vw;
+    position: relative;
+    /* flex-direction: column; */
+
+}
+.section>h2{
+    position: absolute;
+    bottom: 0;
+    left: 42%;
+    font-size: 2.5vw;
+    font-family: gilroy;
+    transition: .8s ease;
+}
+.section:nth-child(2n) h2{
+    left: 5%;
+}
+.section .img{
+    height: 85%;
+    width: 60%;
+    background-color: red;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: .5s ease; 
+}
+
+
+.section .img>img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 1s ease;
+}
+.section .img>img:hover{
+    transform: scale(1.1);
+}
+#let{
+    width:100% ;
+    height: 10vw;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    font-size: 3vw;
+    font-family: van;
+}
+#t{
+    height: 100px;
+    overflow: hidden;
+    width: 450px;
+
+display: flex;
+flex-direction: column;
+    position: relative;
+    background-color: transparent;
+}
+#t>h1{
+    animation: a 20s linear   infinite ;
+
+}
+@keyframes a {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-410%);
+    }
+}
+#loader{
+    height: 100vh;
+    width: 100%;
+    background-color: transparent;
+    position: absolute;
+    z-index: 9999999;
+    pointer-events: none;
+background-color: black;
+}
